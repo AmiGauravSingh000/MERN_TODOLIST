@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .main-container {
+    background-color: #1e1e1e;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .main-container.light {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .main-container.dark {
+    background-color: #1e1e1e;
+    color: #ddd;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .main-heading {
+    font-size: 24px;
+  }
+  
+  .mode-toggle {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .create-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .create-form input {
+    padding: 12px 20px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 70%;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .create-form.light input {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .create-form.dark input {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .create-form button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #04aa6d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .create-form button:hover {
+    background-color: #028a5e;
+  }
+  
+  .todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #282828;
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .todo-item.light {
+    background-color: #f0f0f0;
+    color: #000000; /* Bright funky color */
+  }
+  
+  .todo-item.dark {
+    background-color: #282828;
+    color: #ddd;
+  }
+  
+  .todo-item:hover {
+    background-color: #333;
+    transform: scale(1.02);
+  }
+  
+  .checkbox {
+    display: flex;
+    align-items: center;
+  }
+  
+  .checkbox .icon {
+    margin-right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .checkbox .icon:hover {
+    color: #04aa6d;
+  }
+  
+  .trash-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: #f44336;
+    transition: color 0.3s;
+  }
+  
+  .trash-icon:hover {
+    color: #ff6b6b;
+  }
+  
+  .completed {
+    text-decoration: line-through;
+    color: #888;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .create-form input {
+      width: 60%;
+    }
+  
+    .create-form button {
+      padding: 10px 15px;
+      font-size: 14px;
+    }
+  
+    .todo-item {
+      padding: 10px 15px;
+    }
+  
+    .checkbox .icon, .trash-icon {
+      font-size: 20px;
+    }
+  }
+  
